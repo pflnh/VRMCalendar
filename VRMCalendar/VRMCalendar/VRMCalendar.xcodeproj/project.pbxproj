@@ -1,0 +1,337 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9FF4133F1CB3E2C300591E86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4133E1CB3E2C300591E86 /* AppDelegate.swift */; };
+		9FF413411CB3E2C300591E86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF413401CB3E2C300591E86 /* ViewController.swift */; };
+		9FF413441CB3E2C300591E86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FF413421CB3E2C300591E86 /* Main.storyboard */; };
+		9FF413461CB3E2C300591E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF413451CB3E2C300591E86 /* Assets.xcassets */; };
+		9FF413491CB3E2C300591E86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FF413471CB3E2C300591E86 /* LaunchScreen.storyboard */; };
+		9FF413591CB3E2D500591E86 /* VRMCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF413511CB3E2D500591E86 /* VRMCalendarCell.swift */; };
+		9FF4135A1CB3E2D500591E86 /* VRMCalendarHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF413521CB3E2D500591E86 /* VRMCalendarHeader.swift */; };
+		9FF4135B1CB3E2D500591E86 /* VRMCalendarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF413531CB3E2D500591E86 /* VRMCalendarPage.swift */; };
+		9FF4135C1CB3E2D500591E86 /* VRMCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF413541CB3E2D500591E86 /* VRMCalendarView.swift */; };
+		9FF4135D1CB3E2D500591E86 /* NSDate+VRMAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF413561CB3E2D500591E86 /* NSDate+VRMAdditions.swift */; };
+		9FF4135E1CB3E2D500591E86 /* VRMCalendarProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF413571CB3E2D500591E86 /* VRMCalendarProtocols.swift */; };
+		9FF4135F1CB3E2D500591E86 /* VRMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF413581CB3E2D500591E86 /* VRMConstants.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9FF4133B1CB3E2C300591E86 /* VRMCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRMCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FF4133E1CB3E2C300591E86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9FF413401CB3E2C300591E86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9FF413431CB3E2C300591E86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9FF413451CB3E2C300591E86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9FF413481CB3E2C300591E86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9FF4134A1CB3E2C300591E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FF413511CB3E2D500591E86 /* VRMCalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRMCalendarCell.swift; sourceTree = "<group>"; };
+		9FF413521CB3E2D500591E86 /* VRMCalendarHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRMCalendarHeader.swift; sourceTree = "<group>"; };
+		9FF413531CB3E2D500591E86 /* VRMCalendarPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRMCalendarPage.swift; sourceTree = "<group>"; };
+		9FF413541CB3E2D500591E86 /* VRMCalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRMCalendarView.swift; sourceTree = "<group>"; };
+		9FF413561CB3E2D500591E86 /* NSDate+VRMAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+VRMAdditions.swift"; sourceTree = "<group>"; };
+		9FF413571CB3E2D500591E86 /* VRMCalendarProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRMCalendarProtocols.swift; sourceTree = "<group>"; };
+		9FF413581CB3E2D500591E86 /* VRMConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRMConstants.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9FF413381CB3E2C300591E86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9FF413321CB3E2C300591E86 = {
+			isa = PBXGroup;
+			children = (
+				9FF4133D1CB3E2C300591E86 /* VRMCalendar */,
+				9FF4133C1CB3E2C300591E86 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9FF4133C1CB3E2C300591E86 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9FF4133B1CB3E2C300591E86 /* VRMCalendar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9FF4133D1CB3E2C300591E86 /* VRMCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				9FF4133E1CB3E2C300591E86 /* AppDelegate.swift */,
+				9FF413401CB3E2C300591E86 /* ViewController.swift */,
+				9FF413421CB3E2C300591E86 /* Main.storyboard */,
+				9FF413451CB3E2C300591E86 /* Assets.xcassets */,
+				9FF413471CB3E2C300591E86 /* LaunchScreen.storyboard */,
+				9FF413501CB3E2D500591E86 /* VRMCalendar */,
+				9FF4134A1CB3E2C300591E86 /* Info.plist */,
+			);
+			path = VRMCalendar;
+			sourceTree = "<group>";
+		};
+		9FF413501CB3E2D500591E86 /* VRMCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				9FF413511CB3E2D500591E86 /* VRMCalendarCell.swift */,
+				9FF413521CB3E2D500591E86 /* VRMCalendarHeader.swift */,
+				9FF413531CB3E2D500591E86 /* VRMCalendarPage.swift */,
+				9FF413541CB3E2D500591E86 /* VRMCalendarView.swift */,
+				9FF413551CB3E2D500591E86 /* VRMUtils */,
+			);
+			path = VRMCalendar;
+			sourceTree = "<group>";
+		};
+		9FF413551CB3E2D500591E86 /* VRMUtils */ = {
+			isa = PBXGroup;
+			children = (
+				9FF413561CB3E2D500591E86 /* NSDate+VRMAdditions.swift */,
+				9FF413571CB3E2D500591E86 /* VRMCalendarProtocols.swift */,
+				9FF413581CB3E2D500591E86 /* VRMConstants.swift */,
+			);
+			path = VRMUtils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9FF4133A1CB3E2C300591E86 /* VRMCalendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FF4134D1CB3E2C300591E86 /* Build configuration list for PBXNativeTarget "VRMCalendar" */;
+			buildPhases = (
+				9FF413371CB3E2C300591E86 /* Sources */,
+				9FF413381CB3E2C300591E86 /* Frameworks */,
+				9FF413391CB3E2C300591E86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VRMCalendar;
+			productName = VRMCalendar;
+			productReference = 9FF4133B1CB3E2C300591E86 /* VRMCalendar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9FF413331CB3E2C300591E86 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Vorm;
+				TargetAttributes = {
+					9FF4133A1CB3E2C300591E86 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 9FF413361CB3E2C300591E86 /* Build configuration list for PBXProject "VRMCalendar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9FF413321CB3E2C300591E86;
+			productRefGroup = 9FF4133C1CB3E2C300591E86 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9FF4133A1CB3E2C300591E86 /* VRMCalendar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9FF413391CB3E2C300591E86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FF413491CB3E2C300591E86 /* LaunchScreen.storyboard in Resources */,
+				9FF413461CB3E2C300591E86 /* Assets.xcassets in Resources */,
+				9FF413441CB3E2C300591E86 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9FF413371CB3E2C300591E86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FF413411CB3E2C300591E86 /* ViewController.swift in Sources */,
+				9FF4135E1CB3E2D500591E86 /* VRMCalendarProtocols.swift in Sources */,
+				9FF4135D1CB3E2D500591E86 /* NSDate+VRMAdditions.swift in Sources */,
+				9FF4133F1CB3E2C300591E86 /* AppDelegate.swift in Sources */,
+				9FF4135C1CB3E2D500591E86 /* VRMCalendarView.swift in Sources */,
+				9FF4135F1CB3E2D500591E86 /* VRMConstants.swift in Sources */,
+				9FF4135A1CB3E2D500591E86 /* VRMCalendarHeader.swift in Sources */,
+				9FF4135B1CB3E2D500591E86 /* VRMCalendarPage.swift in Sources */,
+				9FF413591CB3E2D500591E86 /* VRMCalendarCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9FF413421CB3E2C300591E86 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FF413431CB3E2C300591E86 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9FF413471CB3E2C300591E86 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FF413481CB3E2C300591E86 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9FF4134B1CB3E2C300591E86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9FF4134C1CB3E2C300591E86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9FF4134E1CB3E2C300591E86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VRMCalendar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vorm.VRMCalendar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9FF4134F1CB3E2C300591E86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VRMCalendar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vorm.VRMCalendar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9FF413361CB3E2C300591E86 /* Build configuration list for PBXProject "VRMCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FF4134B1CB3E2C300591E86 /* Debug */,
+				9FF4134C1CB3E2C300591E86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FF4134D1CB3E2C300591E86 /* Build configuration list for PBXNativeTarget "VRMCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FF4134E1CB3E2C300591E86 /* Debug */,
+				9FF4134F1CB3E2C300591E86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9FF413331CB3E2C300591E86 /* Project object */;
+}
