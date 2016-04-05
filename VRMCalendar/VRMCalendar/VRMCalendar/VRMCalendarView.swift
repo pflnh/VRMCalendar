@@ -13,6 +13,8 @@ class VRMCalendarView: UIViewController {
     //MARK: public
     
     var date : NSDate!
+    var allowsSingleSelection = true
+    var allowsRangeSelection = false
     
     //MARK: private
 
@@ -53,6 +55,9 @@ class VRMCalendarView: UIViewController {
     var dataSource : VRMCalendarViewDataSource?
     var registerdNib : UINib!
 
+    var startingMarkDate : NSDate?
+    var endingMarkDate : NSDate?
+    
     //MARK: init
     
     init(frame : CGRect!, currentDate : NSDate!) {
@@ -164,6 +169,14 @@ class VRMCalendarView: UIViewController {
     func currentPageFrameForPageNumber(pageNumber : Int) -> CGRect {
         let xOrigin = CGFloat(pageNumber) * self.view.frame.size.width
         return CGRectMake(xOrigin, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height)
+    }
+    
+    //MARK : date marking
+    
+    func handleDateMarkingForCell(cell : VRMCalendarCell) {
+        if self.allowsRangeSelection {
+
+        }
     }
 }
 

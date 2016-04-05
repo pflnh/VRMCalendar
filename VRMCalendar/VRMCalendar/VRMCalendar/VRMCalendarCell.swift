@@ -15,10 +15,16 @@ class VRMCalendarCell: UICollectionViewCell {
     var inCurrentMonth = true
     var selectionEnabled : Bool?
     
-    func makeBlank() {
+    func makeInactiveMonthDay() {
         inCurrentMonth = false
         self.contentView.hidden = true
         self.alpha = 0
         selectionEnabled = false
+    }
+    
+    func select() {
+        let bgView = UIView()
+        bgView.backgroundColor = UIColor.blueColor()
+        
     }
 }

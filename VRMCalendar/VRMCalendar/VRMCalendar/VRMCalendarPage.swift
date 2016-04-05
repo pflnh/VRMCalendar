@@ -113,11 +113,10 @@ extension VRMCalendarPage : UICollectionViewDataSource {
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(pageCollectionViewCellIdentifier, forIndexPath: indexPath) as! VRMCalendarCell
-//        cell.backgroundColor = debug_randomColor()
         let indexedDate = calculateDateAtIndexPath(indexPath)
         if let customizedCell = dataSource?.VRMPage(customizeCell: cell, withDate: indexedDate) {
             if (indexedDate.month() != currentMonth) {
-                customizedCell.makeBlank()
+                customizedCell.makeInactiveMonthDay()
             }
             return customizedCell
         }

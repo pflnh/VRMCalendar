@@ -8,7 +8,7 @@
 
 import UIKit
 
-//MARK: calendar view
+//MARK: calendar view data source
 
 protocol VRMCalendarViewDataSource {
     
@@ -23,7 +23,7 @@ protocol VRMCalendarViewDelegate {
     func VRMCalendar(calendar calendarView : VRMCalendarView, didSelectCell cell : VRMCalendarCell, withDate date : NSDate)
 }
 
-//MARK: calendar page
+//MARK: calendar page data source
 
 protocol VRMCalendarPageDataSource {
     
@@ -32,6 +32,8 @@ protocol VRMCalendarPageDataSource {
     func VRMPage(headerHeightFor month: Int, inYear year : Int) -> CGFloat?
     func VRMPage(sizeForCellWithDate date : NSDate) -> CGSize
 }
+
+//MARK: calendar delegate
 
 protocol VRMCalendarPageDelegate {
     

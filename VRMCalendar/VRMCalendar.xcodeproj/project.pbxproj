@@ -91,10 +91,10 @@
 		9FF413501CB3E2D500591E86 /* VRMCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				9FF413541CB3E2D500591E86 /* VRMCalendarView.swift */,
+				9FF413531CB3E2D500591E86 /* VRMCalendarPage.swift */,
 				9FF413511CB3E2D500591E86 /* VRMCalendarCell.swift */,
 				9FF413521CB3E2D500591E86 /* VRMCalendarHeader.swift */,
-				9FF413531CB3E2D500591E86 /* VRMCalendarPage.swift */,
-				9FF413541CB3E2D500591E86 /* VRMCalendarView.swift */,
 				9FF413551CB3E2D500591E86 /* VRMUtils */,
 			);
 			path = VRMCalendar;
@@ -342,6 +342,7 @@
 				9FF4134F1CB3E2C300591E86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
