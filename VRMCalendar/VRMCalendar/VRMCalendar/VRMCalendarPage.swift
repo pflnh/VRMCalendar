@@ -43,8 +43,8 @@ class VRMCalendarPage: UIViewController {
         super.viewDidLoad()
     }
     
-    override func viewWillAVRMear(animated: Bool) {
-         super.viewWillAVRMear(animated)
+    override func viewWillAppear(animated: Bool) {
+         super.viewWillAppear(animated)
         loadCalendar()
     }
     

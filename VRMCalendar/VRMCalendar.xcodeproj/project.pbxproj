@@ -97,10 +97,10 @@
 		9FF413221CB3D2E800591E86 /* VRMCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				9FF413261CB3D2E800591E86 /* VRMCalendarView.swift */,
+				9FF413251CB3D2E800591E86 /* VRMCalendarPage.swift */,
 				9FF413231CB3D2E800591E86 /* VRMCalendarCell.swift */,
 				9FF413241CB3D2E800591E86 /* VRMCalendarHeader.swift */,
-				9FF413251CB3D2E800591E86 /* VRMCalendarPage.swift */,
-				9FF413261CB3D2E800591E86 /* VRMCalendarView.swift */,
 				9FF413271CB3D2E800591E86 /* VRMUtils */,
 			);
 			path = VRMCalendar;

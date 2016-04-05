@@ -83,8 +83,8 @@ class VRMCalendarView: UIViewController {
         self.view.addSubview(scrollView)
     }
     
-    override func viewWillAVRMear(animated: Bool) {
-        super.viewWillAVRMear(animated)
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         constrainScrollView()
         loadInitialCalendar()
     }
