@@ -90,10 +90,20 @@ extension NSDate {
         return NSCalendar.currentCalendar().dateFromComponents(components)!
     }
     
-    //TODO: remove this
-    func stringValue() -> String {
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = "MMMM yyyy"
-        return formatter.stringFromDate(self)
+    func dateBetween(start : NSDate, end : NSDate) -> Bool {
+        if self.compare(start) == .OrderedAscending {
+            return false
+        }
+        if self.compare(end) == .OrderedDescending {
+            return false
+        }
+        return true
+    }
+    
+    func inSameDayWith(date : NSDate) -> Bool {
+        if self.day() == date.day() && self.month() == date.month() && self.year() == self.year() {
+            return true
+        }
+        return false
     }
 }

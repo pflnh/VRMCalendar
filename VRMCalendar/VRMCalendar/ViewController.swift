@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         calendar = VRMCalendarView(frame: CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.width), currentDate: NSDate())
+        calendar.allowsRangeSelection = true
         calendar.registerCellNib(UINib(nibName: "FOOCell", bundle: nil))
         calendar.delegate = self
         calendar.dataSource = self
@@ -23,7 +24,6 @@ class ViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
 
@@ -38,9 +38,6 @@ extension ViewController : VRMCalendarViewDataSource {
     
     func VRMCalendar(calendar calendarView: VRMCalendarView, customizedCell cell: VRMCalendarCell, forItemWithDate date: NSDate) -> VRMCalendarCell {
         let fooCell = cell as! FOOCell
-        fooCell.selectionHandler = {(cell, date) in
-            // do any animation you want
-        }
         fooCell.loadWithDate(date)
         return cell
     }

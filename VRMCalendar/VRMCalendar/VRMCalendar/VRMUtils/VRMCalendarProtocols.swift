@@ -31,6 +31,7 @@ protocol VRMCalendarPageDataSource {
     func VRMPage(headerForMonth month : Int, inYear year : Int) -> VRMCalendarHeader?
     func VRMPage(headerHeightFor month: Int, inYear year : Int) -> CGFloat?
     func VRMPage(sizeForCellWithDate date : NSDate) -> CGSize
+    func VRMPageShouldMarkCellWithDate(date : NSDate) -> Bool
 }
 
 //MARK: calendar delegate

@@ -18,6 +18,9 @@ class VRMCalendarPage: UIViewController {
     }
     
     var date : NSDate!
+    var selectedSingleDate : NSDate?
+    var selectedStartDeta : NSDate?
+    var selectedEndDate : NSDate?
     
     var registerdNib : UINib!
     var delegate : VRMCalendarPageDelegate?
@@ -97,6 +100,12 @@ class VRMCalendarPage: UIViewController {
         let row = indexPath.row
         return row - date.firstMonthDayIndex() + 1
     }
+    
+    func reloadData() {
+        self.collectionView.performBatchUpdates({ () -> Void in
+            [self.collectionView .reloadSections(NSIndexSet(index: 0))]
+            }, completion: nil)
+    }
 }
 
 extension VRMCalendarPage : UICollectionViewDelegate {
@@ -104,7 +113,6 @@ extension VRMCalendarPage : UICollectionViewDelegate {
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let cell = collectionView.cellForItemAtIndexPath(indexPath) as! VRMCalendarCell
         let selectedDate = calculateDateAtIndexPath(indexPath)
-        cell.selectionHandler!(cell, selectedDate)
         delegate?.VRMPage(didSelectCell: cell, withDate: selectedDate)
     }
 }
@@ -117,6 +125,12 @@ extension VRMCalendarPage : UICollectionViewDataSource {
         if let customizedCell = dataSource?.VRMPage(customizeCell: cell, withDate: indexedDate) {
             if (indexedDate.month() != currentMonth) {
                 customizedCell.makeInactiveMonthDay()
+            }
+            if (dataSource?.VRMPageShouldMarkCellWithDate(indexedDate) == true) {
+                customizedCell.select()
+            }
+            else {
+                customizedCell.deselect()
             }
             return customizedCell
         }

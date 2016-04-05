@@ -32,12 +32,12 @@
 		9FF413451CB3E2C300591E86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FF413481CB3E2C300591E86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FF4134A1CB3E2C300591E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9FF413511CB3E2D500591E86 /* VRMCalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRMCalendarCell.swift; sourceTree = "<group>"; };
-		9FF413521CB3E2D500591E86 /* VRMCalendarHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRMCalendarHeader.swift; sourceTree = "<group>"; };
-		9FF413531CB3E2D500591E86 /* VRMCalendarPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRMCalendarPage.swift; sourceTree = "<group>"; };
-		9FF413541CB3E2D500591E86 /* VRMCalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRMCalendarView.swift; sourceTree = "<group>"; };
+		9FF413511CB3E2D500591E86 /* VRMCalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VRMCalendarCell.swift; path = ../VRMCalendarCell.swift; sourceTree = "<group>"; };
+		9FF413521CB3E2D500591E86 /* VRMCalendarHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VRMCalendarHeader.swift; path = ../VRMCalendarHeader.swift; sourceTree = "<group>"; };
+		9FF413531CB3E2D500591E86 /* VRMCalendarPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VRMCalendarPage.swift; path = ../VRMCalendarPage.swift; sourceTree = "<group>"; };
+		9FF413541CB3E2D500591E86 /* VRMCalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VRMCalendarView.swift; path = ../VRMCalendarView.swift; sourceTree = "<group>"; };
 		9FF413561CB3E2D500591E86 /* NSDate+VRMAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+VRMAdditions.swift"; sourceTree = "<group>"; };
-		9FF413571CB3E2D500591E86 /* VRMCalendarProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRMCalendarProtocols.swift; sourceTree = "<group>"; };
+		9FF413571CB3E2D500591E86 /* VRMCalendarProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VRMCalendarProtocols.swift; path = ../VRMUtils/VRMCalendarProtocols.swift; sourceTree = "<group>"; };
 		9FF413581CB3E2D500591E86 /* VRMConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRMConstants.swift; sourceTree = "<group>"; };
 		9FF413601CB3E32800591E86 /* FOOCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FOOCell.swift; sourceTree = "<group>"; };
 		9FF413611CB3E32800591E86 /* FOOCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FOOCell.xib; sourceTree = "<group>"; };
@@ -55,6 +55,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9FAE98501CB41D2100114394 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9FF413511CB3E2D500591E86 /* VRMCalendarCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		9FAE98511CB41D2100114394 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				9FF413521CB3E2D500591E86 /* VRMCalendarHeader.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		9FAE98521CB41D2100114394 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9FF413571CB3E2D500591E86 /* VRMCalendarProtocols.swift */,
+				9FF413541CB3E2D500591E86 /* VRMCalendarView.swift */,
+				9FF413531CB3E2D500591E86 /* VRMCalendarPage.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		9FF413321CB3E2C300591E86 = {
 			isa = PBXGroup;
 			children = (
@@ -91,10 +117,9 @@
 		9FF413501CB3E2D500591E86 /* VRMCalendar */ = {
 			isa = PBXGroup;
 			children = (
-				9FF413541CB3E2D500591E86 /* VRMCalendarView.swift */,
-				9FF413531CB3E2D500591E86 /* VRMCalendarPage.swift */,
-				9FF413511CB3E2D500591E86 /* VRMCalendarCell.swift */,
-				9FF413521CB3E2D500591E86 /* VRMCalendarHeader.swift */,
+				9FAE98501CB41D2100114394 /* Cell */,
+				9FAE98511CB41D2100114394 /* Header */,
+				9FAE98521CB41D2100114394 /* View */,
 				9FF413551CB3E2D500591E86 /* VRMUtils */,
 			);
 			path = VRMCalendar;
@@ -104,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				9FF413561CB3E2D500591E86 /* NSDate+VRMAdditions.swift */,
-				9FF413571CB3E2D500591E86 /* VRMCalendarProtocols.swift */,
 				9FF413581CB3E2D500591E86 /* VRMConstants.swift */,
 			);
 			path = VRMUtils;

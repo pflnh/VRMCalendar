@@ -13,7 +13,6 @@ class VRMCalendarView: UIViewController {
     //MARK: public
     
     var date : NSDate!
-    var allowsSingleSelection = true
     var allowsRangeSelection = false
     
     //MARK: private
@@ -57,6 +56,7 @@ class VRMCalendarView: UIViewController {
 
     var startingMarkDate : NSDate?
     var endingMarkDate : NSDate?
+    var singleMarkDate : NSDate?
     
     //MARK: init
     
@@ -73,6 +73,8 @@ class VRMCalendarView: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+    
+    //MARK: view setup
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,6 +109,12 @@ class VRMCalendarView: UIViewController {
     }
     
     //MARK: reloading calendar
+    
+    func reloadData() {
+        self.previousPage.reloadData()
+        self.currentPage.reloadData()
+        self.nextPage.reloadData()
+    }
     
     func loadInitialCalendar() {
         let prevMonth = date.dateByDecrementingMonth()
@@ -173,10 +181,35 @@ class VRMCalendarView: UIViewController {
     
     //MARK : date marking
     
-    func handleDateMarkingForCell(cell : VRMCalendarCell) {
+    func handleDateMarkingForCell(cell : VRMCalendarCell, withDate date : NSDate) {
         if self.allowsRangeSelection {
-
+            if let _ = self.startingMarkDate, _ = self.endingMarkDate {
+                self.startingMarkDate = nil
+                self.endingMarkDate = nil
+            }
+            else if let start = self.startingMarkDate {
+                if (start.compare(date) == .OrderedDescending) {
+                    self.endingMarkDate = self.startingMarkDate
+                    self.startingMarkDate = date
+                }
+                else {
+                    self.endingMarkDate = date
+                }
+            }
+            else {
+                self.startingMarkDate = date
+            }
         }
+        else {
+            self.singleMarkDate = date
+        }
+        self.reloadData()
+    }
+    
+    func clearSelection() {
+        self.singleMarkDate = nil
+        self.endingMarkDate = nil
+        self.startingMarkDate = nil
     }
 }
 
@@ -205,6 +238,7 @@ extension VRMCalendarView : UIScrollViewDelegate {
 extension VRMCalendarView : VRMCalendarPageDelegate {
     
     func VRMPage(didSelectCell cell: VRMCalendarCell, withDate: NSDate) {
+        self.handleDateMarkingForCell(cell, withDate: withDate)
         delegate?.VRMCalendar(calendar: self, didSelectCell: cell, withDate: withDate)
     }
 }
@@ -231,6 +265,28 @@ extension VRMCalendarView : VRMCalendarPageDataSource {
     
     func VRMPage(customizeCell cell: VRMCalendarCell, withDate date: NSDate) -> VRMCalendarCell {
         return (dataSource?.VRMCalendar(calendar: self, customizedCell: cell, forItemWithDate: date))!
+    }
+    
+    func VRMPageShouldMarkCellWithDate(date: NSDate) -> Bool {
+        
+        if self.allowsRangeSelection {
+            if let start = startingMarkDate, end = endingMarkDate {
+                if (date.dateBetween(start, end: end)){
+                    return true
+                }
+            }
+            else if let start = startingMarkDate {
+                if date.inSameDayWith(start) {
+                    return true
+                }
+            }
+        }
+        if let singleMark = self.singleMarkDate {
+            if date.inSameDayWith(singleMark) {
+                return true
+            }
+        }        
+        return false
     }
 }
 

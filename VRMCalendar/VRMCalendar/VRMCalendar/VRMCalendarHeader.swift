@@ -16,7 +16,6 @@ class VRMCalendarHeader: UIView {
         let title = UILabel(frame: frame)
         title.backgroundColor = bgColor
         title.textColor = color
-        title.text = date.stringValue()
         title.font = UIFont.boldSystemFontOfSize(20)
         title.textAlignment = .Center
         header.addSubview(title)
